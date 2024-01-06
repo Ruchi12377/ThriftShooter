@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class ModeObject : MonoBehaviour
 {
 	public GameMode mode = 0;
+	private float _startedTime;
 
 	private void Start()
 	{
@@ -12,9 +13,11 @@ public class ModeObject : MonoBehaviour
 
 	private void Update()
 	{
+		_startedTime += Time.deltaTime;
+
 		if (SceneManager.GetActiveScene().name != "Title") return;
 		
-		if (Input.GetButton("Fire1"))
+		if (Input.GetButton("Fire1") && _startedTime > 2)
 		{
 			SceneManager.LoadScene("Main");
 		}

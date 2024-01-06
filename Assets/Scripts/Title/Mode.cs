@@ -8,9 +8,9 @@ public class Mode : MonoBehaviour
 	[SerializeField] private RectTransform hard;
 	[SerializeField] private RectTransform hell;
 	[SerializeField] private ModeObject modeObject;
+	private const float SelectDead = 0.3f;
 	private int _currentSelect;
 	private bool _isDownSelect;
-	private const float SelectDead = 0.3f;
 
 	private void Update()
 	{

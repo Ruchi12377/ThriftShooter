@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
 		if (modeObject != null)
 		{
 			Mode = modeObject.mode;
+			Destroy(modeObject.gameObject);
 		}
 	}
 
